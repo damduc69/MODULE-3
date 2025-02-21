@@ -55,7 +55,7 @@ insert into Class values (3, 'B3', current_date, 0);
 insert into Student (StudentName, Address, Phone, Status, ClassID)
 values ('Hung', 'Ha Noi', '0912113113', 1, 1);
 insert into Student (StudentName, Address, Phone, Status, ClassID)
-values ('Hoa', 'Hai phong', 1, 1);
+values ('Hoa', 'Hai phong','0123456789', 1, 1);
 insert into Student (StudentName, Address, Phone, Status, ClassID)
 values ('Manh', 'HCM', '0123123123', 0, 2);
 
@@ -101,4 +101,24 @@ values (1, 'CF', 5, 1),
  join Mark M on S.StudentID = M.StudentID
  join Subject Sub on Sub.SubID = M.SubID
  order by M.Mark DESC, S.StudentName ASC;
+ 
+ select Address, count(StudentId) as 'So luong SV'
+ from Student
+ group by Address;
+ 
+ select S.StudentId, S.StudentName, avg(Mark)
+ from Student S join Mark M on S.StudentId = M.StudentId
+ group by S.StudentId, S.StudentName;
+ 
+ select S.StudentId, S.StudentName, avg(Mark)
+ from Student S join Mark M on S.StudentId = M.StudentId
+ group by S.StudentId, S.StudentName
+ having avg(Mark) > 5;
+ 
+select S.StudentId, S.StudentName, avg(Mark)
+from Student S join Mark M on S.StudentId = M.StudentId
+group by S.StudentId, S.StudentName
+having avg(Mark) >= all (select avg(Mark) from Mark group by Mark.StudentId);
+
+
  
