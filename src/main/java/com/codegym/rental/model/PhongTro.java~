@@ -1,0 +1,72 @@
+package com.codegym.rental.model;
+
+import java.util.Date;
+
+public class PhongTro {
+    private int maPhongTro;
+    private String tenNguoiThue;
+    private String soDienThoai;
+    private Date ngayBatDauThue;
+    private String hinhThucThanhToan;
+    private String ghiChu;
+
+    public PhongTro() {
+    }
+
+    public PhongTro(int maPhongTro, String tenNguoiThue, String soDienThoai, Date ngayBatDauThue, String hinhThucThanhToan, String ghiChu) {
+        this.maPhongTro = maPhongTro;
+        this.tenNguoiThue = tenNguoiThue;
+        this.soDienThoai = soDienThoai;
+        this.ngayBatDauThue = ngayBatDauThue;
+        this.hinhThucThanhToan = hinhThucThanhToan;
+        this.ghiChu = ghiChu;
+    }
+
+    public int getMaPhongTro() {
+        return maPhongTro;
+    }
+
+    public void setMaPhongTro(int maPhongTro) {
+        this.maPhongTro = maPhongTro;
+    }
+
+    public String getTenNguoiThue() {
+        return tenNguoiThue;
+    }
+
+    public void setTenNguoiThue(String tenNguoiThue) {
+        this.tenNguoiThue = tenNguoiThue;
+    }
+
+    public String getSoDienThoai() {
+        return soDienThoai;
+    }
+
+    public void setSoDienThoai(String soDienThoai) {
+        this.soDienThoai = soDienThoai;
+    }
+
+    public java.sql.Date getNgayBatDauThue() {
+        return (java.sql.Date) ngayBatDauThue;
+    }
+
+    public void setNgayBatDauThue(Date ngayBatDauThue) {
+        this.ngayBatDauThue = ngayBatDauThue;
+    }
+
+    public String getHinhThucThanhToan() {
+        return hinhThucThanhToan;
+    }
+
+    public void setHinhThucThanhToan(String hinhThucThanhToan) {
+        this.hinhThucThanhToan = hinhThucThanhToan;
+    }
+
+    public String getGhiChu() {
+        return ghiChu;
+    }
+
+    public void setGhiChu(String ghiChu) {
+        this.ghiChu = ghiChu;
+    }
+}
